@@ -41,17 +41,26 @@
       <div class="max-w-5xl mx-auto">
         <h2 class="text-2xl font-semibold mb-10 text-center">Projects</h2>
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer" onclick="toggleDetails('project1')">
             <h3 class="text-xl font-semibold mb-2">Snake Species Identification</h3>
             <p class="text-gray-600 text-sm">Image-based CNN and classical ML model for snake classification.</p>
+            <div id="project1" class="mt-4 text-sm text-gray-700 hidden">
+              <p>Developed a model to classify venomous and non-venomous snake species from images using CNN, MLP, and SVM. Preprocessing included image normalization and augmentation. Built using Python and TensorFlow.</p>
+            </div>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer" onclick="toggleDetails('project2')">
             <h3 class="text-xl font-semibold mb-2">Context Misinformation Detection</h3>
             <p class="text-gray-600 text-sm">Multi-modal classification using S-BERT + ResNet for fake content detection.</p>
+            <div id="project2" class="mt-4 text-sm text-gray-700 hidden">
+              <p>Built a hybrid model to detect mismatched context between text and images in online media. Used S-BERT for text and ResNet for image embeddings, combined through an MLP + SVM pipeline. Implemented in TensorFlow.</p>
+            </div>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer" onclick="toggleDetails('project3')">
             <h3 class="text-xl font-semibold mb-2">Prevent/Enable Relation Detection</h3>
             <p class="text-gray-600 text-sm">Text classification of causal event relationships using SBERT and Ensemble models.</p>
+            <div id="project3" class="mt-4 text-sm text-gray-700 hidden">
+              <p>Analyzed causal relationships between events in news data. Built a 1.4M sentence dataset and used S-BERT with ensemble classifiers (Random Forest, XGBoost). Achieved high accuracy in event-type classification tasks.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -78,5 +87,13 @@
     <footer class="text-center text-sm text-gray-500 py-8">
       © 2025 Mohd Aamir. All rights reserved.
     </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+      function toggleDetails(id) {
+        const el = document.getElementById(id);
+        el.classList.toggle('hidden');
+      }
+    </script>
   </body>
 </html>
