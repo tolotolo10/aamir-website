@@ -13,6 +13,11 @@
       body {
         font-family: 'Inter', sans-serif;
         transition: background 0.3s, color 0.3s;
+        background-image: url('WhatsApp_Image_2025-07-30_at_18.05.25_79040944.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
       }
       .dark-mode {
         background-color: #111827;
@@ -20,9 +25,8 @@
       }
     </style>
   </head>
-  <body class="bg-white text-gray-900" id="body">
-    <!-- Navbar -->
-    <nav class="flex justify-between items-center px-8 py-6 border-b">
+  <body class="text-gray-900" id="body">
+    <nav class="flex justify-between items-center px-8 py-6 border-b bg-white bg-opacity-80 backdrop-blur">
       <div class="text-xl font-semibold">Mohd Aamir</div>
       <div class="space-x-6 text-sm">
         <a href="#about" class="hover:text-blue-600 transition">About</a>
@@ -35,21 +39,18 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="text-center px-6 py-24 bg-gradient-to-b from-white to-gray-50" data-aos="fade-up">
+    <section class="text-center px-6 py-24" data-aos="fade-up">
       <p class="text-sm text-blue-600 mb-2">Actively looking for AI training and automation related roles</p>
       <h1 class="text-5xl font-bold tracking-tight mb-4">Exploring Intelligence Through AI</h1>
-      <p class="text-lg text-gray-700 max-w-2xl mx-auto">I’m Mohd Aamir, a machine learning engineer passionate about AI agents, automation, and real-world impact.</p>
+      <p class="text-lg max-w-2xl mx-auto text-gray-800">I’m Mohd Aamir, a machine learning engineer passionate about AI agents, automation, and real-world impact.</p>
       <a href="#projects" class="mt-10 inline-block bg-gray-900 text-white px-6 py-3 rounded-full text-sm hover:bg-gray-700 transition">See My Work</a>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-6">About Me</h2>
       <p class="mb-4 text-gray-800">Everyday AI user looking to keep up with the world of AI and build stuff that helps. I'm an ML research engineer, and the ease of automation — while knowing the complexity behind it — motivates me.</p>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="py-20 px-6 max-w-4xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-6">Experience</h2>
       <div class="space-y-8">
@@ -74,7 +75,6 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="bg-gray-50 py-24 px-6" data-aos="fade-up">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-2xl font-semibold mb-10 text-center">Projects</h2>
@@ -101,7 +101,6 @@
       </div>
     </section>
 
-    <!-- Learning Notes Section -->
     <section id="notes" class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-6">Learning Notes</h2>
       <div class="space-y-6">
@@ -120,14 +119,12 @@
       </div>
     </section>
 
-    <!-- Resume Section -->
     <section id="resume" class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-4">Resume</h2>
       <p class="text-gray-700 mb-2">Download my resume here:</p>
       <a href="Aamir_s_Resume.pdf" class="text-blue-600 underline text-sm" target="_blank">Download Resume (PDF)</a>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="bg-gray-100 py-24 px-6" data-aos="fade-up">
       <div class="max-w-xl mx-auto text-center">
         <h2 class="text-2xl font-semibold mb-4">Contact</h2>
@@ -136,8 +133,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-sm text-gray-500 py-8">© 2025 Mohd Aamir. All rights reserved.</footer>
+    <footer class="text-center text-sm text-gray-500 py-8 bg-white bg-opacity-80 backdrop-blur">© 2025 Mohd Aamir. All rights reserved.</footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
