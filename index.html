@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohd Aamir</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -12,80 +13,49 @@
     </style>
   </head>
   <body class="bg-white text-gray-900">
-    <!-- Navbar -->
-    <nav class="flex justify-between items-center px-8 py-6 border-b">
-      <div class="text-xl font-semibold">Mohd Aamir</div>
-      <div class="space-x-6 text-sm">
-        <a href="#about" class="hover:text-blue-600 transition">About</a>
-        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-        <a href="#resume" class="hover:text-blue-600 transition">Resume</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-      </div>
-    </nav>
-
     <!-- Hero Section -->
-    <section class="text-center px-6 py-32 bg-gradient-to-b from-white to-gray-50">
+    <section class="text-center px-6 py-32 bg-gradient-to-b from-white to-gray-50" data-aos="fade-up">
       <h1 class="text-5xl font-bold tracking-tight mb-4">Exploring Intelligence Through AI</h1>
       <p class="text-lg text-gray-700 max-w-2xl mx-auto">I’m Mohd Aamir, a machine learning engineer passionate about AI agents, automation, and real-world impact. I build and explore, one project at a time.</p>
       <a href="#projects" class="mt-10 inline-block bg-gray-900 text-white px-6 py-3 rounded-full text-sm hover:bg-gray-700 transition">See My Work</a>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 px-6 max-w-3xl mx-auto">
+    <section id="about" class="py-24 px-6 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-6">About Me</h2>
       <p class="mb-4 text-gray-800">Everyday AI user looking to keep up with the world of AI and build stuff that helps. I'm an ML research engineer, and the ease of automation — while knowing the complexity behind it — motivates me.</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="bg-gray-50 py-24 px-6">
+    <section id="projects" class="bg-gray-50 py-24 px-6" data-aos="fade-up">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-2xl font-semibold mb-10 text-center">Projects</h2>
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition" data-aos="zoom-in">
             <h3 class="text-xl font-semibold mb-2">Snake Species Identification</h3>
             <p class="text-gray-600 text-sm">Image-based CNN and classical ML model for snake classification.</p>
-            <div class="mt-2">
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">Python</span>
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">TensorFlow</span>
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded">CNN</span>
-            </div>
-            <button onclick="openModal('modal1')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
           </div>
-
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition" data-aos="zoom-in" data-aos-delay="100">
             <h3 class="text-xl font-semibold mb-2">Context Misinformation Detection</h3>
             <p class="text-gray-600 text-sm">Multi-modal classification using S-BERT + ResNet for fake content detection.</p>
-            <div class="mt-2">
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">S-BERT</span>
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">ResNet</span>
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded">TensorFlow</span>
-            </div>
-            <button onclick="openModal('modal2')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
           </div>
-
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition" data-aos="zoom-in" data-aos-delay="200">
             <h3 class="text-xl font-semibold mb-2">Prevent/Enable Relation Detection</h3>
             <p class="text-gray-600 text-sm">Text classification of causal event relationships using SBERT and Ensemble models.</p>
-            <div class="mt-2">
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">S-BERT</span>
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">XGBoost</span>
-              <span class="bg-gray-200 text-xs px-2 py-1 rounded">Ensemble</span>
-            </div>
-            <button onclick="openModal('modal3')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="py-24 px-6 max-w-3xl mx-auto">
+    <section id="resume" class="py-24 px-6 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-6">Resume</h2>
       <p class="text-gray-700 mb-4">Research Engineer at EURECOM, working on anomaly detection and diffusion models. Past internship at Huawei on computer vision tasks. Download my resume below:</p>
       <a href="Aamir_s_Resume.pdf" class="text-blue-600 underline text-sm" target="_blank">Download Resume (PDF)</a>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-gray-100 py-24 px-6">
+    <section id="contact" class="bg-gray-100 py-24 px-6" data-aos="fade-up">
       <div class="max-w-xl mx-auto text-center">
         <h2 class="text-2xl font-semibold mb-4">Contact</h2>
         <p class="text-gray-700 mb-4">Reach out to me via email or connect on LinkedIn:</p>
@@ -99,41 +69,13 @@
       © 2025 Mohd Aamir. All rights reserved.
     </footer>
 
-    <!-- Modals -->
-    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
-        <h3 class="text-lg font-semibold mb-2">Snake Species Identification</h3>
-        <p class="text-sm text-gray-700">Developed a model to classify venomous and non-venomous snake species from images using CNN, MLP, and SVM. Preprocessing included image normalization and augmentation. Built using Python and TensorFlow.</p>
-        <button onclick="closeModal('modal1')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
-      </div>
-    </div>
-
-    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
-        <h3 class="text-lg font-semibold mb-2">Context Misinformation Detection</h3>
-        <p class="text-sm text-gray-700">Built a hybrid model to detect mismatched context between text and images in online media. Used S-BERT for text and ResNet for image embeddings, combined through an MLP + SVM pipeline. Implemented in TensorFlow.</p>
-        <button onclick="closeModal('modal2')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
-      </div>
-    </div>
-
-    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
-        <h3 class="text-lg font-semibold mb-2">Prevent/Enable Relation Detection</h3>
-        <p class="text-sm text-gray-700">Analyzed causal relationships between events in news data. Built a 1.4M sentence dataset and used S-BERT with ensemble classifiers (Random Forest, XGBoost). Achieved high accuracy in event-type classification tasks.</p>
-        <button onclick="closeModal('modal3')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
-      </div>
-    </div>
-
-    <!-- JavaScript for modal control -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      function openModal(id) {
-        document.getElementById(id).classList.remove('hidden');
-        document.getElementById(id).classList.add('flex');
-      }
-      function closeModal(id) {
-        document.getElementById(id).classList.add('hidden');
-        document.getElementById(id).classList.remove('flex');
-      }
+      AOS.init({
+        once: true,
+        duration: 800,
+        easing: 'ease-in-out',
+      });
     </script>
   </body>
 </html>
