@@ -40,49 +40,71 @@
       <a href="#projects" class="mt-10 inline-block bg-gray-900 text-white px-6 py-3 rounded-full text-sm hover:bg-gray-700 transition">See My Work</a>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-20 px-6 max-w-4xl mx-auto" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-6">Experience</h2>
-      <div class="space-y-8">
-        <div>
-          <h3 class="text-xl font-semibold">Research Engineer – EURECOM</h3>
-          <p class="text-sm text-gray-600">Sophia Antipolis, France | Feb 2024 – Jul 2025</p>
-          <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
-            <li>Built anomaly detection models for multivariate time series in Huawei’s Netception project</li>
-            <li>Developed INR-based models, improved imputation beyond state-of-the-art</li>
-            <li>Worked on EU Andoit6G project with latent diffusion models</li>
-            <li>Co-authored research paper (submitted)</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-xl font-semibold">Research Intern – Huawei (Computer Vision)</h3>
-          <p class="text-sm text-gray-600">Mougins, France | Mar 2023 – Sep 2023</p>
-          <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
-            <li>Created dataset of 50,000 raw noisy images by reversing ISP</li>
-            <li>Built CNN denoising model, optimized via pruning (21% faster)</li>
-          </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-50 py-24 px-6" data-aos="fade-up">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl font-semibold mb-10 text-center">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">Snake Species Identification</h3>
+            <p class="text-gray-600 text-sm">Image-based CNN and classical ML model for snake classification.</p>
+            <div class="mt-2">
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">Python</span>
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">TensorFlow</span>
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded">CNN</span>
+            </div>
+            <button onclick="openModal('modal1')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">Context Misinformation Detection</h3>
+            <p class="text-gray-600 text-sm">Multi-modal classification using S-BERT + ResNet for fake content detection.</p>
+            <div class="mt-2">
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">S-BERT</span>
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">ResNet</span>
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded">TensorFlow</span>
+            </div>
+            <button onclick="openModal('modal2')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">Prevent/Enable Relation Detection</h3>
+            <p class="text-gray-600 text-sm">Text classification of causal event relationships using SBERT and Ensemble models.</p>
+            <div class="mt-2">
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">S-BERT</span>
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">XGBoost</span>
+              <span class="bg-gray-200 text-xs px-2 py-1 rounded">Ensemble</span>
+            </div>
+            <button onclick="openModal('modal3')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Notes Section -->
-    <section id="notes" class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-6">Learning Notes</h2>
-      <div class="space-y-6">
-        <div>
-          <h3 class="text-lg font-semibold">How I got started with LangChain</h3>
-          <p class="text-sm text-gray-700">I began by integrating LangChain with basic prompt chains and later explored agent tooling. The documentation is vast, but building simple chains with OpenAI tools helped me understand it faster. Now exploring memory and tool calling capabilities.</p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">What I learned building my first AI agent</h3>
-          <p class="text-sm text-gray-700">Even a basic agent that retrieves web content and summarizes it required clear prompts, fallback logic, and memory handling. Debugging and deterministic behavior were surprisingly challenging and fun.</p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Prompt Engineering: Claude vs GPT</h3>
-          <p class="text-sm text-gray-700">Claude was better at structured instructions and JSON outputs, while GPT-4 felt stronger in code generation and flexibility. I use both depending on whether structure or creativity is the focus.</p>
-        </div>
+    <!-- Modals -->
+    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Snake Species Identification</h3>
+        <p class="text-sm text-gray-700">Developed a model to classify venomous and non-venomous snake species from images using CNN, MLP, and SVM. Preprocessing included image normalization and augmentation. Built using Python and TensorFlow.</p>
+        <button onclick="closeModal('modal1')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
       </div>
-    </section>
+    </div>
+
+    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Context Misinformation Detection</h3>
+        <p class="text-sm text-gray-700">Built a hybrid model to detect mismatched context between text and images in online media. Used S-BERT for text and ResNet for image embeddings, combined through an MLP + SVM pipeline. Implemented in TensorFlow.</p>
+        <button onclick="closeModal('modal2')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
+      </div>
+    </div>
+
+    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Prevent/Enable Relation Detection</h3>
+        <p class="text-sm text-gray-700">Analyzed causal relationships between events in news data. Built a 1.4M sentence dataset and used S-BERT with ensemble classifiers (Random Forest, XGBoost). Achieved high accuracy in event-type classification tasks.</p>
+        <button onclick="closeModal('modal3')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
+      </div>
+    </div>
 
     <!-- JavaScript for Modals & AOS & Dark Mode -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
