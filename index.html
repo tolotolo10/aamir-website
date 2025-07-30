@@ -9,73 +9,94 @@
     <style>
       body {
         font-family: 'Inter', sans-serif;
+        transition: background 0.3s, color 0.3s;
+      }
+      .dark-mode {
+        background-color: #111827;
+        color: #e5e7eb;
       }
     </style>
   </head>
-  <body class="bg-white text-gray-900">
+  <body class="bg-white text-gray-900" id="body">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center px-8 py-6 border-b">
+      <div class="text-xl font-semibold">Mohd Aamir</div>
+      <div class="space-x-6 text-sm">
+        <a href="#about" class="hover:text-blue-600 transition">About</a>
+        <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+        <a href="#notes" class="hover:text-blue-600 transition">Notes</a>
+        <a href="#resume" class="hover:text-blue-600 transition">Resume</a>
+        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+        <button onclick="toggleDarkMode()" class="text-sm border px-2 py-1 rounded">🌗</button>
+      </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="text-center px-6 py-32 bg-gradient-to-b from-white to-gray-50" data-aos="fade-up">
+    <section class="text-center px-6 py-24 bg-gradient-to-b from-white to-gray-50" data-aos="fade-up">
+      <p class="text-sm text-blue-600 mb-2">Actively looking for AI training and automation related roles</p>
       <h1 class="text-5xl font-bold tracking-tight mb-4">Exploring Intelligence Through AI</h1>
       <p class="text-lg text-gray-700 max-w-2xl mx-auto">I’m Mohd Aamir, a machine learning engineer passionate about AI agents, automation, and real-world impact. I build and explore, one project at a time.</p>
       <a href="#projects" class="mt-10 inline-block bg-gray-900 text-white px-6 py-3 rounded-full text-sm hover:bg-gray-700 transition">See My Work</a>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 px-6 max-w-3xl mx-auto" data-aos="fade-up">
+    <section id="about" class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-6">About Me</h2>
       <p class="mb-4 text-gray-800">Everyday AI user looking to keep up with the world of AI and build stuff that helps. I'm an ML research engineer, and the ease of automation — while knowing the complexity behind it — motivates me.</p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="bg-gray-50 py-24 px-6" data-aos="fade-up">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-2xl font-semibold mb-10 text-center">Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition" data-aos="zoom-in">
-            <h3 class="text-xl font-semibold mb-2">Snake Species Identification</h3>
-            <p class="text-gray-600 text-sm">Image-based CNN and classical ML model for snake classification.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition" data-aos="zoom-in" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Context Misinformation Detection</h3>
-            <p class="text-gray-600 text-sm">Multi-modal classification using S-BERT + ResNet for fake content detection.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition" data-aos="zoom-in" data-aos-delay="200">
-            <h3 class="text-xl font-semibold mb-2">Prevent/Enable Relation Detection</h3>
-            <p class="text-gray-600 text-sm">Text classification of causal event relationships using SBERT and Ensemble models.</p>
-          </div>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-6 max-w-4xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-6">Experience</h2>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-xl font-semibold">Research Engineer – EURECOM</h3>
+          <p class="text-sm text-gray-600">Sophia Antipolis, France | Feb 2024 – Jul 2025</p>
+          <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
+            <li>Built anomaly detection models for multivariate time series in Huawei’s Netception project</li>
+            <li>Developed INR-based models, improved imputation beyond state-of-the-art</li>
+            <li>Worked on EU Andoit6G project with latent diffusion models</li>
+            <li>Co-authored research paper (submitted)</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold">Research Intern – Huawei (Computer Vision)</h3>
+          <p class="text-sm text-gray-600">Mougins, France | Mar 2023 – Sep 2023</p>
+          <ul class="list-disc list-inside text-sm mt-2 text-gray-700">
+            <li>Created dataset of 50,000 raw noisy images by reversing ISP</li>
+            <li>Built CNN denoising model, optimized via pruning (21% faster)</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="py-24 px-6 max-w-3xl mx-auto" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold mb-6">Resume</h2>
-      <p class="text-gray-700 mb-4">Research Engineer at EURECOM, working on anomaly detection and diffusion models. Past internship at Huawei on computer vision tasks. Download my resume below:</p>
-      <a href="Aamir_s_Resume.pdf" class="text-blue-600 underline text-sm" target="_blank">Download Resume (PDF)</a>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="bg-gray-100 py-24 px-6" data-aos="fade-up">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <p class="text-gray-700 mb-4">Reach out to me via email or connect on LinkedIn:</p>
-        <p><a class="text-blue-600 underline" href="mailto:astroaamir96@gmail.com">astroaamir96@gmail.com</a></p>
-        <p><a class="text-blue-600 underline" href="https://linkedin.com/in/mohd-aamir-485b6b251/" target="_blank">LinkedIn Profile</a></p>
+    <!-- Notes Section -->
+    <section id="notes" class="py-20 px-6 max-w-3xl mx-auto" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-6">Learning Notes</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold">How I got started with LangChain</h3>
+          <p class="text-sm text-gray-700">I began by integrating LangChain with basic prompt chains and later explored agent tooling. The documentation is vast, but building simple chains with OpenAI tools helped me understand it faster. Now exploring memory and tool calling capabilities.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">What I learned building my first AI agent</h3>
+          <p class="text-sm text-gray-700">Even a basic agent that retrieves web content and summarizes it required clear prompts, fallback logic, and memory handling. Debugging and deterministic behavior were surprisingly challenging and fun.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Prompt Engineering: Claude vs GPT</h3>
+          <p class="text-sm text-gray-700">Claude was better at structured instructions and JSON outputs, while GPT-4 felt stronger in code generation and flexibility. I use both depending on whether structure or creativity is the focus.</p>
+        </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="text-center text-sm text-gray-500 py-8">
-      © 2025 Mohd Aamir. All rights reserved.
-    </footer>
-
+    <!-- AOS & Dark Mode Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        once: true,
-        duration: 800,
-        easing: 'ease-in-out',
-      });
+      AOS.init({ once: true, duration: 800 });
+      function toggleDarkMode() {
+        document.getElementById('body').classList.toggle('dark-mode');
+      }
     </script>
   </body>
 </html>
