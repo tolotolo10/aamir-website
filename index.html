@@ -49,10 +49,7 @@
               <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">TensorFlow</span>
               <span class="bg-gray-200 text-xs px-2 py-1 rounded">CNN</span>
             </div>
-            <div id="project1" class="mt-4 text-sm text-gray-700 hidden">
-              <p>Developed a model to classify venomous and non-venomous snake species from images using CNN, MLP, and SVM. Preprocessing included image normalization and augmentation. Built using Python and TensorFlow.</p>
-            </div>
-            <button onclick="toggleDetails('project1', this)" class="mt-2 text-blue-600 text-sm hover:underline">Read more</button>
+            <button onclick="openModal('modal1')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
@@ -63,10 +60,7 @@
               <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">ResNet</span>
               <span class="bg-gray-200 text-xs px-2 py-1 rounded">TensorFlow</span>
             </div>
-            <div id="project2" class="mt-4 text-sm text-gray-700 hidden">
-              <p>Built a hybrid model to detect mismatched context between text and images in online media. Used S-BERT for text and ResNet for image embeddings, combined through an MLP + SVM pipeline. Implemented in TensorFlow.</p>
-            </div>
-            <button onclick="toggleDetails('project2', this)" class="mt-2 text-blue-600 text-sm hover:underline">Read more</button>
+            <button onclick="openModal('modal2')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
           </div>
 
           <div class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
@@ -77,10 +71,7 @@
               <span class="bg-gray-200 text-xs px-2 py-1 rounded mr-2">XGBoost</span>
               <span class="bg-gray-200 text-xs px-2 py-1 rounded">Ensemble</span>
             </div>
-            <div id="project3" class="mt-4 text-sm text-gray-700 hidden">
-              <p>Analyzed causal relationships between events in news data. Built a 1.4M sentence dataset and used S-BERT with ensemble classifiers (Random Forest, XGBoost). Achieved high accuracy in event-type classification tasks.</p>
-            </div>
-            <button onclick="toggleDetails('project3', this)" class="mt-2 text-blue-600 text-sm hover:underline">Read more</button>
+            <button onclick="openModal('modal3')" class="mt-4 text-blue-600 text-sm hover:underline">Read more</button>
           </div>
         </div>
       </div>
@@ -108,13 +99,40 @@
       © 2025 Mohd Aamir. All rights reserved.
     </footer>
 
-    <!-- JavaScript for interactivity -->
+    <!-- Modals -->
+    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Snake Species Identification</h3>
+        <p class="text-sm text-gray-700">Developed a model to classify venomous and non-venomous snake species from images using CNN, MLP, and SVM. Preprocessing included image normalization and augmentation. Built using Python and TensorFlow.</p>
+        <button onclick="closeModal('modal1')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
+      </div>
+    </div>
+
+    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Context Misinformation Detection</h3>
+        <p class="text-sm text-gray-700">Built a hybrid model to detect mismatched context between text and images in online media. Used S-BERT for text and ResNet for image embeddings, combined through an MLP + SVM pipeline. Implemented in TensorFlow.</p>
+        <button onclick="closeModal('modal2')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
+      </div>
+    </div>
+
+    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+      <div class="bg-white max-w-lg w-full p-6 rounded-lg shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Prevent/Enable Relation Detection</h3>
+        <p class="text-sm text-gray-700">Analyzed causal relationships between events in news data. Built a 1.4M sentence dataset and used S-BERT with ensemble classifiers (Random Forest, XGBoost). Achieved high accuracy in event-type classification tasks.</p>
+        <button onclick="closeModal('modal3')" class="mt-4 text-blue-600 text-sm hover:underline">Close</button>
+      </div>
+    </div>
+
+    <!-- JavaScript for modal control -->
     <script>
-      function toggleDetails(id, btn) {
-        const el = document.getElementById(id);
-        const showing = !el.classList.contains('hidden');
-        el.classList.toggle('hidden');
-        btn.innerText = showing ? 'Read more' : 'Show less';
+      function openModal(id) {
+        document.getElementById(id).classList.remove('hidden');
+        document.getElementById(id).classList.add('flex');
+      }
+      function closeModal(id) {
+        document.getElementById(id).classList.add('hidden');
+        document.getElementById(id).classList.remove('flex');
       }
     </script>
   </body>
