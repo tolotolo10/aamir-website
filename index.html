@@ -221,27 +221,14 @@ React, TailwindCSS, Flask/FastAPI, REST APIs, OpenAI API, HuggingFace Hub API
             title="details of the project"
           >
             <!-- Top-right action icons -->
-            <div class="absolute top-3 right-3 flex items-center gap-3">
-              <!-- Website -->
-              <a href="https://your-enterprise-ai-site.com"
-                 target="_blank" rel="noopener"
-                 aria-label="Visit Enterprise AI website"
-                 title="Open website"
-                 class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
-                <!-- external-link icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
-                  <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
-                </svg>
-              </a>
+            <div class="absolute top-3 right-3 flex items-center gap-4">
               <!-- PDF -->
               <a href="Enterprise_AI_Project_Details.pdf"
                  target="_blank" rel="noopener"
                  aria-label="Open project PDF"
                  title="Open project PDF"
                  class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
-                <!-- document icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                   <path d="M14 2v6h6"></path>
                 </svg>
@@ -252,18 +239,25 @@ React, TailwindCSS, Flask/FastAPI, REST APIs, OpenAI API, HuggingFace Hub API
                  aria-label="View Enterprise AI on GitHub"
                  title="View on GitHub"
                  class="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
-                <!-- GitHub icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.94.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.55-3.87-1.55-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.19-3.11-.12-.29-.52-1.45.11-3.02 0 0 .98-.31 3.21 1.18a11.2 11.2 0 0 1 2.92-.39c.99 0 1.99.13 2.92.39 2.23-1.49 3.2-1.18 3.2-1.18.63 1.57.23 2.73.11 3.02.74.81 1.19 1.85 1.19 3.11 0 4.44-2.69 5.41-5.25 5.69.42.36.79 1.08.79 2.19v3.24c0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/>
                 </svg>
               </a>
             </div>
     
             <h3 class="text-2xl font-semibold mb-2">Enterprise AI</h3>
+    
+            <!-- Live Demo Badge -->
+            <a href="https://your-enterprise-ai-demo.com"
+               target="_blank" rel="noopener"
+               class="inline-block mb-3 text-xs font-semibold bg-blue-600 text-white px-3 py-1 rounded-full shadow hover:bg-blue-700 transition-transform transform hover:scale-105 hover:animate-pulse">
+               Live Demo
+            </a>
+    
             <p class="text-gray-700 dark:text-gray-200 text-sm md:text-base">
               An end-to-end enterprise assistant platform that combines <strong>LangChain agents</strong>, <strong>tool/function calling</strong>,
               and <strong>RAG</strong> over company knowledge to answer questions, automate workflows, and integrate with external APIs.
-              Built with <strong>FastAPI</strong> (streaming), Docker, and Kubernetes with CI/CD, RBAC auth, and observability.  
+              Built with <strong>FastAPI</strong>, Docker, and Kubernetes with CI/CD, RBAC auth, and observability.  
               <em>Use cases:</em> document QA, customer support, workflow automation, analytics dashboards, and multi-modal assistants.
             </p>
     
