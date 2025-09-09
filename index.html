@@ -118,8 +118,6 @@
         <a href="#experience" class="hover:text-blue-600 transition nav-link">Experience</a>
         <a href="#projects" class="hover:text-blue-600 transition nav-link">Projects</a>
         <a href="#tech-stack" class="hover:text-blue-600 transition nav-link">Tech</a>
-        <a href="#notes" class="hover:text-blue-600 transition nav-link">Notes</a>
-        <a href="#resume" class="hover:text-blue-600 transition nav-link">Resume</a>
         <a href="#contact" class="hover:text-blue-600 transition nav-link">Contact</a>
         <button id="darkToggle" type="button" class="text-sm border px-2 py-1 rounded shadow-sm hover:bg-gray-50 dark:hover:bg-gray-800" aria-label="Toggle dark mode">🌗</button>
       </div>
@@ -131,8 +129,16 @@
     <section class="text-center px-6 py-20 md:py-24" data-aos="fade-up">
       <div class="max-w-2xl mx-auto frosted">
         <img src="hero.jpg" alt="Portrait of Mohd Aamir" width="256" height="256" loading="eager" decoding="async" class="w-28 h-28 md:w-32 md:h-32 rounded-full mx-auto mb-6 shadow-lg object-cover border-4 border-white" />
-        <p class="text-xs tracking-widest font-mono text-gray-700 dark:text-gray-300 uppercase mb-4">[ status: actively seeking AI/ML/LLM roles ]</p>
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">Exploring Intelligence Through AI</h1>
+          <!-- Status (bold + dark only on “actively seeking”) -->
+        <p class="text-xs tracking-widest font-mono uppercase mb-4 text-gray-500 dark:text-gray-300">
+          [<span class="font-bold text-gray-900 dark:text-white"> status: actively seeking AI/ML/LLM roles.</span> ]
+        </p>
+
+        <!-- Title (lighter weight + lighter color) -->
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight mb-4 text-gray-700 dark:text-gray-200">
+          Exploring Intelligence Through AI
+        </h1>
+
         <p class="text-base md:text-lg text-gray-800 dark:text-gray-200">I’m Mohd Aamir, a machine learning engineer passionate about AI agents, automation, and real-world impact.</p>
         <a href="#projects" class="mt-8 inline-block bg-gray-900 text-white px-6 py-3 rounded-full text-sm hover:bg-gray-700 transition shadow">See My Work</a>
       </div>
@@ -142,8 +148,8 @@
     <section id="about" class="py-16 md:py-20 px-6 max-w-3xl mx-auto" aria-labelledby="about-title" data-aos="fade-up">
       <div class="frosted">
         <h2 id="about-title" class="text-2xl font-semibold mb-6">About Me</h2>
-        <p class="text-gray-800 dark:text-gray-200">I'm an ML/AI engineer, having worked on training, integrating & deploying ML and diffusion models along with writing technical papers. 
-        Currently learning about and working on Langchain project (check out below) , open to research, data scientist, MLOps, ML Engineer roles.</p>
+        <p class="text-gray-800 dark:text-gray-200">I'm an ML/AI engineer, having worked on data processing, training, integrating & deploying ML and diffusion models along with writing technical papers. 
+        Currently learning about and working on a Langchain project (check out below) , open to research, data scientist, MLOps, ML Engineer roles.</p>
       </div>
     </section>
 
@@ -179,9 +185,11 @@
     <section id="tech-stack" class="py-16 md:py-20 px-6 max-w-3xl mx-auto" aria-labelledby="tech-title" data-aos="fade-up">
       <div class="frosted text-center">
         <h2 id="tech-title" class="text-2xl font-semibold mb-6">Technical Skill Stack</h2>
-        <button onclick="toggleSkills()" class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition shadow" aria-expanded="false" aria-controls="skillContent">
-          Click to see if I am worth it (yes i am)
-        </button>
+        <button onclick="toggleSkills()"
+        class="bg-gray-900 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700 transition shadow"
+        aria-expanded="false" aria-controls="skillContent">
+        Click to see the stack
+      </button>
 
         <div id="skillContent" class="grid md:grid-cols-2 gap-6 mt-8 hidden text-left text-sm">
           <div class="frost-card rounded-lg p-4 shadow">
@@ -234,7 +242,7 @@ React, TailwindCSS, Flask/FastAPI, REST APIs, OpenAI API, HuggingFace Hub API
                 </svg>
               </a>
               <!-- GitHub -->
-              <a href="https://github.com/your-username/enterprise-ai"
+              <a href="https://github.com/tolotolo10/ai-assistant-platform"
                  target="_blank" rel="noopener"
                  aria-label="View Enterprise AI on GitHub"
                  title="View on GitHub"
@@ -285,7 +293,7 @@ React, TailwindCSS, Flask/FastAPI, REST APIs, OpenAI API, HuggingFace Hub API
           <!-- Detecting Prevent/Enable Event Relationship -->
           <article class="frost-card p-6 rounded-lg shadow transform transition hover:-translate-y-1 relative" data-aos="zoom-in">
             <!-- GitHub Icon -->
-            <a href="https://github.com/your-username/prevent-enable-events"
+            <a href="https://github.com/tolotolo10/Event-Realtions"
                target="_blank" rel="noopener"
                title="View on GitHub"
                class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
@@ -312,7 +320,7 @@ React, TailwindCSS, Flask/FastAPI, REST APIs, OpenAI API, HuggingFace Hub API
     
           <!-- Context Misinformation Detection -->
           <article class="frost-card p-6 rounded-lg shadow transform transition hover:-translate-y-1 relative" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://github.com/your-username/context-misinformation-detection"
+            <a href="https://github.com/tolotolo10/fake_news_EURECOM"
                target="_blank" rel="noopener"
                title="View on GitHub"
                class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
@@ -334,7 +342,7 @@ React, TailwindCSS, Flask/FastAPI, REST APIs, OpenAI API, HuggingFace Hub API
 
           <!-- Snake Species Identification -->
           <article class="frost-card p-6 rounded-lg shadow transform transition hover:-translate-y-1 relative" data-aos="zoom-in">
-            <a href="https://github.com/your-username/snake-species-identification"
+            <a href="https://github.com/tolotolo10/Snake_Species_Identification"
                target="_blank" rel="noopener"
                title="View on GitHub"
                class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110">
