@@ -402,18 +402,7 @@ React, TailwindCSS, Flask/FastAPI, REST APIs, OpenAI API, HuggingFace Hub API
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     AOS.init({ once: true, duration: prefersReduced ? 0 : 800, disable: prefersReduced });
 
-    // Dark mode persistence + toggle
-    const body = document.getElementById('body');
-    const toggleBtn = document.getElementById('darkToggle');
-    const savedTheme = localStorage.getItem('theme');
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if ((savedTheme === 'dark') || (!savedTheme && systemDark)) body.classList.add('dark-mode');
 
-    function setTheme(isDark){
-      if (isDark) { body.classList.add('dark-mode'); localStorage.setItem('theme','dark'); }
-      else { body.classList.remove('dark-mode'); localStorage.setItem('theme','light'); }
-    }
-    toggleBtn.addEventListener('click', () => setTheme(!body.classList.contains('dark-mode')));
 
     // Skills accordion
     function toggleSkills() {
